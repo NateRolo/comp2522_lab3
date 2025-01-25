@@ -55,6 +55,12 @@ public class IPod extends IDevice
 
         System.out.println(details);
     }
+
+//    @Override
+//    public String toString()
+//    {
+//
+//    }
     /*
      * Validates max volume in decibels of IPod.
      *
