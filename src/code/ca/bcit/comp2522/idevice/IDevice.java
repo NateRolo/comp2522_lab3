@@ -4,7 +4,17 @@ package ca.bcit.comp2522.idevice;
  *
  * @author Nathan O
  */
-public class IDevice
+abstract class IDevice
 {
+    static String purpose;
 
+    IDevice()
+    {
+    }
+    String getPurpose()
+    {
+        return purpose;
+    }
+
+    abstract void printDetails();
 }
