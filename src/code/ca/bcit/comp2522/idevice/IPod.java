@@ -11,6 +11,7 @@ public class IPod extends IDevice
     private static final double MINIMUM_SONGS_STORED = 0;
 
     private final String purpose;
+
     private final double maxVolumeDecibels;
 
     private int songsStored;
@@ -98,11 +99,14 @@ public class IPod extends IDevice
     {
         final StringBuilder builder;
         final String detailsAsString;
+        final String deviceName;
+
+        deviceName = this.getClass().getSimpleName();
 
         builder = new StringBuilder();
 
         builder.append("Device: ")
-               .append("IPod")
+               .append(deviceName)
                .append("\n")
                .append("Purpose: ")
                .append(this.getPurpose())
