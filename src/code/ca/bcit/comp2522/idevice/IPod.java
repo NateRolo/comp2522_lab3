@@ -1,6 +1,10 @@
 package ca.bcit.comp2522.idevice;
 
-
+/**
+ * Represents an iPod, a specific type of IDevice used for playing music.
+ * Provides details about the iPod's purpose, maximum volume in decibels,
+ * and the number of songs stored.
+ */
 public class IPod extends IDevice
 {
     private static final double MINIMUM_VOLUME_DECIBELS = 0;
@@ -32,11 +36,21 @@ public class IPod extends IDevice
         this.purpose = "music";
     }
 
+    /**
+     * Retrieves the maximum volume of the iPod in decibels.
+     *
+     * @return the maximum volume of the iPod as a double.
+     */
     public double getMaxVolumeDecibels()
     {
         return maxVolumeDecibels;
     }
 
+    /**
+     * Sets the number of songs stored on the IPod.
+     *
+     * @param songsStored as an int.
+     */
     public void setSongsStored(final int songsStored)
     {
         validateSongsStored(songsStored);
@@ -44,11 +58,23 @@ public class IPod extends IDevice
         this.songsStored = songsStored;
     }
 
+    /**
+     * Retrieves the number of songs stored on the iPod.
+     *
+     * @return the number of songs stored as an int.
+     */
     public int getSongsStored()
     {
         return songsStored;
     }
 
+
+    /**
+     * Prints the details of the iPod to the console.
+     * Details include the type of device, its purpose,
+     * the number of songs stored,
+     * and the maximum volume in decibels.
+     */
     @Override
     public void printDetails()
     {
@@ -59,6 +85,14 @@ public class IPod extends IDevice
         System.out.println(details);
     }
 
+    /**
+     * Returns a string representation of the iPod,
+     * including its type, purpose,
+     * the number of songs stored,
+     * and the maximum volume in decibels.
+     *
+     * @return a formatted string with the iPod's details.
+     */
     @Override
     public String toString()
     {
@@ -84,6 +118,15 @@ public class IPod extends IDevice
         return detailsAsString;
     }
 
+    /**
+     * Compares this iPod with another object for equality
+     * based on the number of songs stored.
+     *
+     * @param o the object to compare with this iPod.
+     * @return true if the object is an IPod with
+ *             the same number of songs stored,
+     *         false otherwise.
+     */
     @Override
     public boolean equals(final Object o)
     {
@@ -97,17 +140,19 @@ public class IPod extends IDevice
             return false;
         }
 
-        if(((IPod)o).getSongsStored() == this.getSongsStored())
-        {
-            return true;
-        }
-        return false;
+        return ((IPod) o).getSongsStored() == this.getSongsStored();
     }
 
+
+    /**
+     * Returns the hash code for this iPod.
+     *
+     * @return the hash code value as an int.
+     */
     @Override
     public int hashCode()
     {
-     return super.hashCode();
+         return super.hashCode();
     }
 
 
