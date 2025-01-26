@@ -11,7 +11,6 @@ public class IPod extends IDevice
     private static final double MINIMUM_SONGS_STORED = 0;
 
     private final String purpose;
-
     private final double maxVolumeDecibels;
 
     private int songsStored;

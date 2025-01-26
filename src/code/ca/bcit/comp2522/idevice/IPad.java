@@ -1,13 +1,22 @@
 package ca.bcit.comp2522.idevice;
 
+/**
+ * Represents an iPad, a type of IDevice used for learning.
+ * Provides details about its purpose, case status, and iOS version.
+ */
 public class IPad extends IDevice
 {
-
     private final String purpose;
 
     private boolean hasACase;
     private String iOSVersion;
 
+    /**
+     * Constructs an {@code IPad} object.
+     *
+     * @param hasACase    indicates if the iPad has a protective case.
+     * @param iOSVersion  the iOS version of the iPad.
+     */
     public IPad(final boolean hasACase,
                 final String iOSVersion)
     {
@@ -16,6 +25,137 @@ public class IPad extends IDevice
         this.hasACase = hasACase;
         this.iOSVersion = iOSVersion;
         this.purpose = "learning";
+    }
+
+    /**
+     * Retrieves the current iOS version of the iPad.
+     *
+     * @return the iOS version as a String.
+     */
+    public String getIOSVersion()
+    {
+        return iOSVersion;
+    }
+
+    /**
+     * Updates the iOS version of the iPad.
+     * <p>
+     * Validates the provided iOS version before updating.
+     * </p>
+     *
+     * @param iOSVersion the new iOS version to set as a String.
+     */
+    public void setIOSVersion(final String iOSVersion)
+    {
+        validateIOSVersion(iOSVersion);
+
+        this.iOSVersion = iOSVersion;
+    }
+
+    /**
+     * Checks if the iPad has a protective case.
+     *
+     * @return true if the iPad has a case, false otherwise.
+     */
+    public boolean iPadHasACase()
+    {
+        return hasACase;
+    }
+
+    /**
+     * Updates the case status of the iPad.
+     *
+     * @param hasACase a boolean indicating if the iPad has a case.
+     */
+    public void setHasACase(final boolean hasACase)
+    {
+        this.hasACase = hasACase;
+    }
+
+    /**
+     * Provides a string representation of the iPad.
+     * <p>
+     * Includes details about the device type, purpose, case status,
+     * and iOS version.
+     * </p>
+     *
+     * @return a formatted string with the iPad's details.
+     */
+    @Override
+    public String toString()
+    {
+        final StringBuilder builder;
+        final String        detailsAsString;
+        final String        deviceName;
+
+        deviceName = this.getClass().getSimpleName();
+
+        builder = new StringBuilder();
+
+        builder.append("Device: ")
+               .append(deviceName)
+               .append("\n")
+               .append("Purpose: ")
+               .append(this.getPurpose())
+               .append("\n")
+               .append("Has a case: ")
+               .append(hasACase)
+               .append("\n")
+               .append("iOS Version: ")
+               .append(iOSVersion);
+
+        detailsAsString = builder.toString();
+
+        return detailsAsString;
+    }
+
+    /**
+     * Prints the details of the iPad to the console.
+     */
+    @Override
+    void printDetails()
+    {
+        final String details;
+
+        details = this.toString();
+
+        System.out.println(details);
+    }
+
+    /**
+     * Checks if this iPad is equal to another object.
+     * <p>
+     * Two iPads are considered equal if their iOS versions are the same.
+     * </p>
+     *
+     * @param o the object to compare to this iPad.
+     * @return true if the objects are equal, false otherwise.
+     */
+    @Override
+    public boolean equals(final Object o)
+    {
+        if(o == null)
+        {
+            return false;
+        }
+
+        if(!(o.getClass().equals(this.getClass())))
+        {
+            return false;
+        }
+
+        return ((IPad) o).getIOSVersion().equals(this.getIOSVersion());
+    }
+
+    /**
+     * Returns the hash code of this iPad.
+     *
+     * @return the hash code value as an int.
+     */
+    @Override
+    public int hashCode()
+    {
+        return super.hashCode();
     }
 
     /**
@@ -43,92 +183,5 @@ public class IPad extends IDevice
                                                "where X, Y, and Z are integers.");
         }
 
-    }
-
-    public String getIOSVersion()
-    {
-        return iOSVersion;
-    }
-
-    public void setIOSVersion(final String iOSVersion)
-    {
-        validateIOSVersion(iOSVersion);
-
-        this.iOSVersion = iOSVersion;
-    }
-
-    public boolean iPadHasACase()
-    {
-        return hasACase;
-    }
-
-    public void setHasACase(final boolean hasACase)
-    {
-        this.hasACase = hasACase;
-    }
-
-    @Override
-    public String toString()
-    {
-        final StringBuilder builder;
-        final String        detailsAsString;
-        final String deviceName;
-
-        deviceName = this.getClass().getSimpleName();
-
-        builder = new StringBuilder();
-
-        builder.append("Device: ")
-               .append(deviceName)
-               .append("\n")
-               .append("Purpose: ")
-               .append(this.getPurpose())
-               .append("\n")
-               .append("Has a case: ")
-               .append(hasACase)
-               .append("\n")
-               .append("iOS Version: ")
-               .append(iOSVersion);
-
-        detailsAsString = builder.toString();
-
-        return detailsAsString;
-
-    }
-
-    @Override
-    void printDetails()
-    {
-        final String details;
-
-        details = this.toString();
-
-        System.out.println(details);
-    }
-
-    @Override
-    public boolean equals(final Object o)
-    {
-        if(o == null)
-        {
-            return false;
-        }
-
-        if(!(o.getClass().equals(this.getClass())))
-        {
-            return false;
-        }
-
-        return ((IPad) o).getIOSVersion().equals(this.getIOSVersion());
-    }
-
-    /**
-     *
-     * @return
-     */
-    @Override
-    public int hashCode()
-    {
-        return super.hashCode();
     }
 }
