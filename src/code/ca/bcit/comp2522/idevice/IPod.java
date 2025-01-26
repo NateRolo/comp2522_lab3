@@ -97,28 +97,22 @@ public class IPod extends IDevice
     public String toString()
     {
         final StringBuilder builder;
-        final String detailsAsString;
-        final String deviceName;
-
-        deviceName = this.getClass().getSimpleName();
+        final String iDeviceDetails;
+        final String iPodDetails;
 
         builder = new StringBuilder();
+        iDeviceDetails = super.toString();
 
-        builder.append("Device: ")
-               .append(deviceName)
-               .append("\n")
-               .append("Purpose: ")
-               .append(this.getPurpose())
-               .append("\n")
+        builder.append(iDeviceDetails)
                .append("Songs Stored: ")
                .append(songsStored)
                .append("\n")
                .append("Maximum decibel volume: ")
                .append(maxVolumeDecibels);
 
-        detailsAsString = builder.toString();
+        iPodDetails = builder.toString();
 
-        return detailsAsString;
+        return iPodDetails;
     }
 
     /**
