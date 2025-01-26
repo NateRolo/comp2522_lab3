@@ -7,6 +7,7 @@ package ca.bcit.comp2522.idevice;
  */
 public class IPod extends IDevice
 {
+    private static final String IPOD_PURPOSE = "music";
     private static final double MINIMUM_VOLUME_DECIBELS = 0;
     private static final double MINIMUM_SONGS_STORED = 0;
 
@@ -33,7 +34,7 @@ public class IPod extends IDevice
 
         this.songsStored = songsStored;
         this.maxVolumeDecibels = maxVolumeDecibels;
-        this.purpose = "music";
+        this.purpose = IPOD_PURPOSE;
     }
 
     /**
