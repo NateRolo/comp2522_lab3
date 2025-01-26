@@ -11,6 +11,7 @@ abstract class IDevice
     IDevice()
     {
     }
+
     String getPurpose()
     {
         return purpose;
