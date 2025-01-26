@@ -9,7 +9,7 @@ public class IPhone extends IDevice
     private static final String IPHONE_PURPOSE             = "talking";
     private static final double MINIMUM_PHONE_PLAN_MINUTES = 0;
 
-    private final String purpose;
+//    private final String purpose;
 
     private double phonePlanMinutesRemaining;
     private String carrier;
@@ -28,7 +28,7 @@ public class IPhone extends IDevice
 
         this.phonePlanMinutesRemaining = phonePlanMinutes;
         this.carrier = carrier;
-        this.purpose = IPHONE_PURPOSE;
+        purpose = IPHONE_PURPOSE;
     }
 
     /**

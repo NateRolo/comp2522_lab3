@@ -6,7 +6,7 @@ package ca.bcit.comp2522.idevice;
  */
 public class IPad extends IDevice
 {
-    private final String purpose;
+    private static final String IPAD_PURPOSE = "learning";
 
     private boolean hasACase;
     private String iOSVersion;
@@ -24,7 +24,7 @@ public class IPad extends IDevice
 
         this.hasACase = hasACase;
         this.iOSVersion = iOSVersion;
-        this.purpose = "learning";
+        purpose = IPAD_PURPOSE;
     }
 
     /**
