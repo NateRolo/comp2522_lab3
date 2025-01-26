@@ -122,6 +122,10 @@ public class IPad extends IDevice
         return ((IPad) o).getIOSVersion().equals(this.getIOSVersion());
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode()
     {
