@@ -158,7 +158,7 @@ public class IPad extends IDevice
         return super.hashCode();
     }
 
-    /**
+    /*
      * Validates the iOS version string.
      * <p>
      * Ensures that the iOS version follows the format "X.Y" or "X.Y.Z",
@@ -182,6 +182,5 @@ public class IPad extends IDevice
                                                "Expected format is X.Y or X.Y.Z, " +
                                                "where X, Y, and Z are integers.");
         }
-
     }
 }
