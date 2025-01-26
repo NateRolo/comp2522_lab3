@@ -1,6 +1,9 @@
 package ca.bcit.comp2522.idevice;
 
-
+/**
+ * Represents an iPhone, a type of IDevice used primarily for communication.
+ * Provides details about the phone's carrier, remaining minutes, and purpose.
+ */
 public class IPhone extends IDevice
 {
     private static final String IPHONE_PURPOSE             = "talking";
@@ -11,6 +14,12 @@ public class IPhone extends IDevice
     private double phonePlanMinutesRemaining;
     private String carrier;
 
+    /**
+     * Constructs an {@code IPhone} object.
+     *
+     * @param phonePlanMinutes the initial number of minutes in the phone plan.
+     * @param carrier          the carrier providing the phone plan.
+     */
     public IPhone(final double phonePlanMinutes,
                   final String carrier)
     {
@@ -22,11 +31,21 @@ public class IPhone extends IDevice
         this.purpose = IPHONE_PURPOSE;
     }
 
+    /**
+     * Retrieves the carrier for the phone plan.
+     *
+     * @return the carrier as a String.
+     */
     public String getCarrier()
     {
         return carrier;
     }
 
+    /**
+     * Updates the carrier for the phone plan.
+     *
+     * @param carrier the new carrier as a String.
+     */
     public void setCarrier(final String carrier)
     {
         validateCarrier(carrier);
@@ -34,11 +53,21 @@ public class IPhone extends IDevice
         this.carrier = carrier;
     }
 
+    /**
+     * Retrieves the number of minutes remaining on the phone plan.
+     *
+     * @return the number of minutes as a double.
+     */
     public double getPhonePlanMinutesRemaining()
     {
         return phonePlanMinutesRemaining;
     }
 
+    /**
+     * Adds minutes to the phone plan.
+     *
+     * @param minutesAdded the number of minutes to add as a double.
+     */
     public void addMinutes(final double minutesAdded)
     {
         validatePhonePlanMinutes(minutesAdded);
@@ -46,6 +75,15 @@ public class IPhone extends IDevice
         phonePlanMinutesRemaining += minutesAdded;
     }
 
+    /**
+     * Uses minutes from the phone plan.
+     * <p>
+     * If the number of minutes used exceeds the remaining minutes,
+     * the remaining minutes are set to 0, and a message is printed.
+     * </p>
+     *
+     * @param minutesUsed the number of minutes to use as a double.
+     */
     public void useMinutes(final double minutesUsed)
     {
         validatePhonePlanMinutes(minutesUsed);
@@ -62,12 +100,11 @@ public class IPhone extends IDevice
 
     /**
      * Compares this iPhone with another object for equality
-     * based on the number of songs stored.
+     * based on the rounded remaining minutes.
      *
-     * @param o the object to compare with this iPod.
-     * @return true if the object is an IPod with
-     *             the same number of songs stored,
-     *         false otherwise.
+     * @param o the object to compare with this iPhone.
+     * @return true if the object is an IPhone with the same rounded
+     *         remaining minutes, false otherwise.
      */
     @Override
     public boolean equals(final Object o)
@@ -105,6 +142,9 @@ public class IPhone extends IDevice
         return super.hashCode();
     }
 
+    /**
+     * Prints the details of the iPhone to the console.
+     */
     @Override
     void printDetails()
     {
@@ -115,6 +155,15 @@ public class IPhone extends IDevice
         System.out.println(details);
     }
 
+    /*
+     * Validates the number of minutes in the phone plan.
+     * <p>
+     * Ensures that the provided value is not less than the minimum allowed
+     * minutes. If invalid, an IllegalArgumentException is thrown.
+     * </p>
+     *
+     * @param phonePlanMinutes the number of minutes to validate as a double.
+     */
     private static void validatePhonePlanMinutes(final double phonePlanMinutes)
     {
         final boolean phonePlanMinuteLessThanMinimum;
@@ -128,6 +177,15 @@ public class IPhone extends IDevice
         }
     }
 
+    /*
+     * Validates the carrier name.
+     * <p>
+     * Ensures that the provided carrier name is not null or blank.
+     * If invalid, an IllegalArgumentException is thrown.
+     * </p>
+     *
+     * @param carrier the carrier name to validate as a String.
+     */
     private static void validateCarrier(final String carrier)
     {
         if(carrier == null || carrier.isBlank())
@@ -136,6 +194,4 @@ public class IPhone extends IDevice
                                                carrier);
         }
     }
-
-
 }
