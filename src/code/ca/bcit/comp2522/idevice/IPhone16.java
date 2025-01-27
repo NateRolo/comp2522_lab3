@@ -29,6 +29,30 @@ public class IPhone16 extends IPhone
         this.memorySizeGB = memorySizeGB;
     }
 
+    @Override
+    public String toString()
+    {
+        final StringBuilder builder;
+        final String iPhoneDetails;
+        final String iPhone16Details;
+
+        builder = new StringBuilder();
+        iPhoneDetails = super.toString();
+
+        builder.append(iPhoneDetails)
+               .append("Has a high-resolution camera: ")
+               .append(hasHighResCamera)
+               .append("\n")
+               .append("GB of memory: ")
+               .append(memorySizeGB)
+               .append("\n");
+
+        iPhone16Details = builder.toString();
+
+        return iPhone16Details;
+
+    }
+
     private static void validateMemorySize(final int memorySizeGB)
     {
         if((memorySizeGB == LOW_TIER_MEMORY_SIZE_GB) ||
