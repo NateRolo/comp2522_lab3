@@ -18,8 +18,8 @@ public class Main
                         22);
         iPodPurpose = iPod.getPurpose();
 
-        System.out.println(phonePurpose);
-        System.out.println(iPodPurpose);
+        System.out.println(testPhone);
+        System.out.println(iPod);
 
         iPod.printDetails();
 

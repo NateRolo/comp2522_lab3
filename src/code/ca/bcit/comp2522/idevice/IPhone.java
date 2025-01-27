@@ -142,6 +142,31 @@ public class IPhone extends IDevice
         return super.hashCode();
     }
 
+    @Override
+    public String toString()
+    {
+        final StringBuilder builder;
+        final String iDeviceDetails;
+        final String iPhoneDetails;
+
+        builder = new StringBuilder();
+        iDeviceDetails = super.toString();
+
+        builder.append(iDeviceDetails)
+                .append("Phone plan minutes left: ")
+                .append(phonePlanMinutesRemaining)
+                .append("\n")
+                .append("Carrier: ")
+                .append(carrier)
+                .append("\n");
+
+        iPhoneDetails = builder.toString();
+
+        return iPhoneDetails;
+    }
+
+
+
     /**
      * Prints the details of the iPhone to the console.
      */
