@@ -7,21 +7,21 @@ public class Main
         final IPhone testPhone;
         final String phonePurpose;
 
-        final IPod iPod;
+        final IPad   iPad;
         final String iPodPurpose;
 
         testPhone = new IPhone(12,
                                "Rogers");
         phonePurpose = testPhone.getPurpose();
 
-        iPod = new IPod(12,
-                        22);
-        iPodPurpose = iPod.getPurpose();
+         iPad        = new IPad(true,
+                               "22.0.1");
+        iPodPurpose = iPad.getPurpose();
 
         System.out.println(testPhone);
-        System.out.println(iPod);
+        System.out.println(iPad);
 
-        iPod.printDetails();
+
 
     }
 }

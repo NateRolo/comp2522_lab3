@@ -108,7 +108,8 @@ public class IPod extends IDevice
                .append(songsStored)
                .append("\n")
                .append("Maximum decibel volume: ")
-               .append(maxVolumeDecibels);
+               .append(maxVolumeDecibels)
+               .append("\n");
 
         iPodDetails = builder.toString();
 

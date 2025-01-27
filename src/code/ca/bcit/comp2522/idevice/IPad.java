@@ -85,28 +85,24 @@ public class IPad extends IDevice
     public String toString()
     {
         final StringBuilder builder;
-        final String        detailsAsString;
-        final String        deviceName;
-
-        deviceName = this.getClass().getSimpleName();
+        final String        iPadDetails;
+        final String        iDeviceDetails;
 
         builder = new StringBuilder();
 
-        builder.append("Device: ")
-               .append(deviceName)
-               .append("\n")
-               .append("Purpose: ")
-               .append(this.getPurpose())
-               .append("\n")
+        iDeviceDetails = super.toString();
+
+        builder.append(iDeviceDetails)
                .append("Has a case: ")
                .append(hasACase)
                .append("\n")
                .append("iOS Version: ")
-               .append(iOSVersion);
+               .append(iOSVersion)
+               .append("\n");
 
-        detailsAsString = builder.toString();
+        iPadDetails = builder.toString();
 
-        return detailsAsString;
+        return iPadDetails;
     }
 
     /**

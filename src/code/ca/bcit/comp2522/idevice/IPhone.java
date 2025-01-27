@@ -153,12 +153,12 @@ public class IPhone extends IDevice
         iDeviceDetails = super.toString();
 
         builder.append(iDeviceDetails)
-                .append("Phone plan minutes left: ")
-                .append(phonePlanMinutesRemaining)
-                .append("\n")
-                .append("Carrier: ")
-                .append(carrier)
-                .append("\n");
+               .append("Phone plan minutes left: ")
+               .append(phonePlanMinutesRemaining)
+               .append("\n")
+               .append("Carrier: ")
+               .append(carrier)
+               .append("\n");
 
         iPhoneDetails = builder.toString();
 
