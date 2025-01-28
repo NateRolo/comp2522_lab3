@@ -170,13 +170,11 @@ public class IPad extends IDevice
             throw new IllegalArgumentException("iOS version cannot be null or empty.");
         }
 
-        final String iosVersionRegex = "^\\d+\\.\\d+(\\.\\d+)?$";
+        final String iosVersionRegex = "(?i)ipadOS (1[0-9]|20|[1-9])";
 
         if (!iOSVersion.matches(iosVersionRegex)) {
-            throw new IllegalArgumentException("Invalid iOS version format: " +
-                                               iOSVersion + ". " +
-                                               "Expected format is X.Y or X.Y.Z, " +
-                                               "where X, Y, and Z are integers.");
+            throw new IllegalArgumentException("Invalid iOS version: " +
+                                               iOSVersion);
         }
     }
 }
