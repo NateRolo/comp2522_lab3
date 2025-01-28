@@ -1,6 +1,18 @@
 package ca.bcit.comp2522.idevice;
 
-public class IPhone16 extends IPhone
+/**
+ * Represents an iPhone 16 model.
+ *<p>
+ *     Extends the functionality of the base {@code IPhone}
+ *     class by including attributes specific to the iPhone 16,
+ *     such as high-resolution camera support
+ *     and memory size.
+ * </p>
+ *
+ * @author Nathan O
+ * @version 1.0
+ */
+class IPhone16 extends IPhone
 {
     private static final int LOW_TIER_MEMORY_SIZE_GB = 128;
     private static final int MID_TIER_MEMORY_SIZE_GB = 256;
@@ -14,8 +26,10 @@ public class IPhone16 extends IPhone
      *
      * @param phonePlanMinutes the initial number of minutes in the phone plan.
      * @param carrier          the carrier providing the phone plan.
+     * @param hasHighResCamera whether the phone includes a high-resolution camera.
+     * @param memorySizeGB     the memory size of the phone in gigabytes.
      */
-    public IPhone16(final double phonePlanMinutes,
+    IPhone16(final double phonePlanMinutes,
                     final String carrier,
                     final boolean hasHighResCamera,
                     final int memorySizeGB)
@@ -29,11 +43,23 @@ public class IPhone16 extends IPhone
         this.memorySizeGB = memorySizeGB;
     }
 
-    public boolean checkForHighResCamera()
+    /**
+     * Checks whether the iPhone has a high-resolution camera.
+     *
+     * @return {@code true} if the phone includes a high-resolution camera,
+     *         otherwise {@code false}.
+     */
+    boolean checkForHighResCamera()
     {
         return hasHighResCamera;
     }
 
+    /**
+     * Returns a string representation of the iPhone 16.
+     *
+     * @return a string containing details of the iPhone 16, including carrier,
+     *         memory size, and whether it has a high-resolution camera.
+     */
     @Override
     public String toString()
     {
@@ -58,6 +84,27 @@ public class IPhone16 extends IPhone
 
     }
 
+    /**
+     * Prints the details of the iPhone16 to the console.
+     */
+    @Override
+    void printDetails()
+    {
+        final String details;
+
+        details = this.toString();
+
+        System.out.println(details);
+    }
+
+    /**
+     * Compares this {@code IPhone16} with another object for equality.
+     *
+     * @param o the object to compare with this {@code IPhone16}.
+     * @return {@code true} if the given object is an {@code IPhone16} with
+     *         the same phone plan minutes and high-resolution camera status,
+     *         otherwise {@code false}.
+     */
     @Override
     public boolean equals(final Object o)
     {
@@ -85,12 +132,24 @@ public class IPhone16 extends IPhone
         return phonesHaveEqualMinutesRemaining && bothPhonesHaveHighResCamera;
     }
 
+    /**
+     * Generates a hash code for this {@code IPhone16}.
+     *
+     * @return the hash code value.
+     */
     @Override
     public int hashCode()
     {
         return super.hashCode();
     }
 
+    /*
+     * Validates the given memory size for the iPhone 16.
+     *
+     * Ensures the memory size is one of the predefined tiers.
+     *
+     * @param memorySizeGB the memory size to validate, in gigabytes.
+     */
     private static void validateMemorySize(final int memorySizeGB)
     {
         if((memorySizeGB == LOW_TIER_MEMORY_SIZE_GB) ||

@@ -4,6 +4,14 @@ public class Main
 {
     public static void main(final String[] args)
     {
+        testIPodEquality();
+        testIPadEquality();
+        testIPhoneEquality();
+        testIPhone16Equality();
+    }
+
+    private static void testIPodEquality()
+    {
         // Create IPod objects
         final IPod ipod1;
         final IPod ipod2;
@@ -38,7 +46,10 @@ public class Main
             System.out.println("INCORRECT: ipod1 should be equal to ipod3");
         }
         System.out.println();
+    }
 
+    private static void testIPadEquality()
+    {
         // Create IPad objects
         final IPad ipad1;
         final IPad ipad2;
@@ -75,6 +86,10 @@ public class Main
         }
         System.out.println();
 
+    }
+
+    private static void testIPhoneEquality()
+    {
         // Create IPhone objects
         final IPhone iphone1;
         final IPhone iphone2;
@@ -110,6 +125,10 @@ public class Main
         }
         System.out.println();
 
+    }
+
+    private static void testIPhone16Equality()
+    {
         // Create IPhone16 objects
         final IPhone16 iphone16_1;
         final IPhone16 iphone16_2;
@@ -153,4 +172,5 @@ public class Main
         }
         System.out.println();
     }
+
 }

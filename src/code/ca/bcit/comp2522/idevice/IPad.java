@@ -3,8 +3,11 @@ package ca.bcit.comp2522.idevice;
 /**
  * Represents an iPad, a type of IDevice used for learning.
  * Provides details about its purpose, case status, and iOS version.
+ *
+ * @author Nathan O
+ * @version 1.0
  */
-public class IPad extends IDevice
+class IPad extends IDevice
 {
     private static final String IPAD_PURPOSE = "learning";
 
@@ -17,7 +20,7 @@ public class IPad extends IDevice
      * @param hasACase    indicates if the iPad has a protective case.
      * @param iOSVersion  the iOS version of the iPad.
      */
-    public IPad(final boolean hasACase,
+    IPad(final boolean hasACase,
                 final String iOSVersion)
     {
         validateIOSVersion(iOSVersion);
@@ -32,7 +35,7 @@ public class IPad extends IDevice
      *
      * @return the iOS version as a String.
      */
-    public String getIOSVersion()
+    String getIOSVersion()
     {
         return iOSVersion;
     }
@@ -45,7 +48,7 @@ public class IPad extends IDevice
      *
      * @param iOSVersion the new iOS version to set as a String.
      */
-    public void setIOSVersion(final String iOSVersion)
+    void setIOSVersion(final String iOSVersion)
     {
         validateIOSVersion(iOSVersion);
 
@@ -57,7 +60,7 @@ public class IPad extends IDevice
      *
      * @return true if the iPad has a case, false otherwise.
      */
-    public boolean iPadHasACase()
+    boolean iPadHasACase()
     {
         return hasACase;
     }
@@ -67,7 +70,7 @@ public class IPad extends IDevice
      *
      * @param hasACase a boolean indicating if the iPad has a case.
      */
-    public void setHasACase(final boolean hasACase)
+    void setHasACase(final boolean hasACase)
     {
         this.hasACase = hasACase;
     }
@@ -130,6 +133,8 @@ public class IPad extends IDevice
     @Override
     public boolean equals(final Object o)
     {
+        final boolean iPadsHaveSameOS;
+
         if(o == null)
         {
             return false;
@@ -140,7 +145,9 @@ public class IPad extends IDevice
             return false;
         }
 
-        return ((IPad) o).getIOSVersion().equals(this.getIOSVersion());
+        iPadsHaveSameOS = ((IPad) o).getIOSVersion().equals(this.getIOSVersion());
+
+        return iPadsHaveSameOS;
     }
 
     /**
@@ -156,23 +163,25 @@ public class IPad extends IDevice
 
     /*
      * Validates the iOS version string.
-     * <p>
+     *
      * Ensures that the iOS version follows the format "X.Y" or "X.Y.Z",
      * where X, Y, and Z are positive integers. If the version is invalid,
      * an {@code IllegalArgumentException} is thrown.
-     * </p>
      *
      * @param iOSVersion the iOS version to validate as a String.
      */
     private static void validateIOSVersion(final String iOSVersion)
     {
-        if (iOSVersion == null || iOSVersion.isEmpty()) {
-            throw new IllegalArgumentException("iOS version cannot be null or empty.");
+        if (iOSVersion == null || iOSVersion.isEmpty())
+        {
+            throw new IllegalArgumentException("iOS version cannot be " +
+                                               "null or empty.");
         }
 
         final String iosVersionRegex = "(?i)ipadOS (1[0-9]|20|[1-9])";
 
-        if (!iOSVersion.matches(iosVersionRegex)) {
+        if (!iOSVersion.matches(iosVersionRegex))
+        {
             throw new IllegalArgumentException("Invalid iOS version: " +
                                                iOSVersion);
         }

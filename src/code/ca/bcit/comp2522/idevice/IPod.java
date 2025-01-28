@@ -4,8 +4,11 @@ package ca.bcit.comp2522.idevice;
  * Represents an iPod, a specific type of IDevice used for playing music.
  * Provides details about the iPod's purpose, maximum volume in decibels,
  * and the number of songs stored.
+ *
+ * @author Nathan O
+ * @version 1.0
  */
-public class IPod extends IDevice
+class IPod extends IDevice
 {
     private static final String IPOD_PURPOSE = "music";
     private static final double MINIMUM_VOLUME_DECIBELS = 0;
@@ -17,15 +20,11 @@ public class IPod extends IDevice
 
     /**
      * Constructs an {@code IPod} object.
-     * <p>
-     *     Instantiates a {@code purpose}, {@code maxVolumeDecibels} as a double,
-     *     and {@code songsStored} as an int.
-     * </p>
      *
      * @param songsStored the number of songs stored as an int.
      * @param maxVolumeDecibels the max volume of the IPod as a double.
      */
-    public IPod(final int songsStored,
+    IPod(final int songsStored,
                 final double maxVolumeDecibels)
     {
         validateSongsStored(songsStored);
@@ -41,7 +40,7 @@ public class IPod extends IDevice
      *
      * @return the maximum volume of the iPod as a double.
      */
-    public double getMaxVolumeDecibels()
+    double getMaxVolumeDecibels()
     {
         return maxVolumeDecibels;
     }
@@ -51,7 +50,7 @@ public class IPod extends IDevice
      *
      * @param songsStored as an int.
      */
-    public void setSongsStored(final int songsStored)
+    void setSongsStored(final int songsStored)
     {
         validateSongsStored(songsStored);
 
@@ -63,26 +62,9 @@ public class IPod extends IDevice
      *
      * @return the number of songs stored as an int.
      */
-    public int getSongsStored()
+    int getSongsStored()
     {
         return songsStored;
-    }
-
-
-    /**
-     * Prints the details of the iPod to the console.
-     * Details include the type of device, its purpose,
-     * the number of songs stored,
-     * and the maximum volume in decibels.
-     */
-    @Override
-    public void printDetails()
-    {
-        final String details;
-
-        details = this.toString();
-
-        System.out.println(details);
     }
 
     /**
@@ -117,6 +99,22 @@ public class IPod extends IDevice
     }
 
     /**
+     * Prints the details of the iPod to the console.
+     * Details include the type of device, its purpose,
+     * the number of songs stored,
+     * and the maximum volume in decibels.
+     */
+    @Override
+    public void printDetails()
+    {
+        final String details;
+
+        details = this.toString();
+
+        System.out.println(details);
+    }
+
+    /**
      * Compares this iPod with another object for equality
      * based on the number of songs stored.
      *
@@ -128,6 +126,8 @@ public class IPod extends IDevice
     @Override
     public boolean equals(final Object o)
     {
+        final boolean iPodsHaveEqualSongsStored;
+
         if(o == null)
         {
             return false;
@@ -138,9 +138,11 @@ public class IPod extends IDevice
             return false;
         }
 
-        return ((IPod) o).getSongsStored() == this.getSongsStored();
-    }
+        iPodsHaveEqualSongsStored = ((IPod) o).getSongsStored() ==
+                                    this.getSongsStored();
 
+        return iPodsHaveEqualSongsStored;
+    }
 
     /**
      * Returns the hash code for this iPod.
@@ -156,8 +158,6 @@ public class IPod extends IDevice
 
     /*
      * Validates max volume in decibels of IPod.
-     *
-     * If songsStored is negative, throw IllegalArgumentException.
      */
     private static void validateMaxVolumeDecibels(final double maxVolumeDecibels)
     {
@@ -174,8 +174,6 @@ public class IPod extends IDevice
 
     /*
      * Validates number of songs stored in IPod.
-     *
-     * If songsStored is negative, throw IllegalArgumentException.
      */
     private static void validateSongsStored(final int songsStored)
     {

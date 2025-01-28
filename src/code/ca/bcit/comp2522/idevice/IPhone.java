@@ -3,13 +3,14 @@ package ca.bcit.comp2522.idevice;
 /**
  * Represents an iPhone, a type of IDevice used primarily for communication.
  * Provides details about the phone's carrier, remaining minutes, and purpose.
+ *
+ * @author Nathan O
+ * @version 1.0
  */
-public class IPhone extends IDevice
+class IPhone extends IDevice
 {
     private static final String IPHONE_PURPOSE             = "talking";
     private static final double MINIMUM_PHONE_PLAN_MINUTES = 0;
-
-//    private final String purpose;
 
     private double phonePlanMinutesRemaining;
     private String carrier;
@@ -20,7 +21,7 @@ public class IPhone extends IDevice
      * @param phonePlanMinutes the initial number of minutes in the phone plan.
      * @param carrier          the carrier providing the phone plan.
      */
-    public IPhone(final double phonePlanMinutes,
+    IPhone(final double phonePlanMinutes,
                   final String carrier)
     {
         validatePhonePlanMinutes(phonePlanMinutes);
@@ -36,7 +37,7 @@ public class IPhone extends IDevice
      *
      * @return the carrier as a String.
      */
-    public String getCarrier()
+    String getCarrier()
     {
         return carrier;
     }
@@ -46,7 +47,7 @@ public class IPhone extends IDevice
      *
      * @param carrier the new carrier as a String.
      */
-    public void setCarrier(final String carrier)
+    void setCarrier(final String carrier)
     {
         validateCarrier(carrier);
 
@@ -58,7 +59,7 @@ public class IPhone extends IDevice
      *
      * @return the number of minutes as a double.
      */
-    public double getPhonePlanMinutesRemaining()
+    double getPhonePlanMinutesRemaining()
     {
         return phonePlanMinutesRemaining;
     }
@@ -68,7 +69,7 @@ public class IPhone extends IDevice
      *
      * @param minutesAdded the number of minutes to add as a double.
      */
-    public void addMinutes(final double minutesAdded)
+    void addMinutes(final double minutesAdded)
     {
         validatePhonePlanMinutes(minutesAdded);
 
@@ -84,7 +85,7 @@ public class IPhone extends IDevice
      *
      * @param minutesUsed the number of minutes to use as a double.
      */
-    public void useMinutes(final double minutesUsed)
+    void useMinutes(final double minutesUsed)
     {
         validatePhonePlanMinutes(minutesUsed);
 
