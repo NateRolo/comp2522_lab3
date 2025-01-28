@@ -29,6 +29,11 @@ public class IPhone16 extends IPhone
         this.memorySizeGB = memorySizeGB;
     }
 
+    public boolean checkForHighResCamera()
+    {
+        return hasHighResCamera;
+    }
+
     @Override
     public String toString()
     {
@@ -53,6 +58,32 @@ public class IPhone16 extends IPhone
 
     }
 
+    @Override
+    public boolean equals(final Object o)
+    {
+        final boolean otherPhoneHasHighResCamera;
+        final boolean phonesHaveEqualMinutesRemaining;
+        final boolean bothPhonesHaveHighResCamera;
+
+        if(o == null)
+        {
+            return false;
+        }
+
+        if(!(o.getClass().equals(this.getClass())))
+        {
+            return false;
+        }
+
+        otherPhoneHasHighResCamera = ((IPhone16) o).checkForHighResCamera();
+
+        phonesHaveEqualMinutesRemaining = super.equals(o);
+
+        bothPhonesHaveHighResCamera = (this.hasHighResCamera ==
+                                       otherPhoneHasHighResCamera);
+
+        return phonesHaveEqualMinutesRemaining && bothPhonesHaveHighResCamera;
+    }
     private static void validateMemorySize(final int memorySizeGB)
     {
         if((memorySizeGB == LOW_TIER_MEMORY_SIZE_GB) ||
