@@ -84,6 +84,13 @@ public class IPhone16 extends IPhone
 
         return phonesHaveEqualMinutesRemaining && bothPhonesHaveHighResCamera;
     }
+
+    @Override
+    public int hashCode()
+    {
+        return super.hashCode();
+    }
+
     private static void validateMemorySize(final int memorySizeGB)
     {
         if((memorySizeGB == LOW_TIER_MEMORY_SIZE_GB) ||
