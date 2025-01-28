@@ -9,13 +9,15 @@ public class Main
         final IPod ipod2;
         final IPod ipod3;
 
-
+        // 300 songs, max volume 80.0 dB
         ipod1 = new IPod(300,
-                         80.0); // 300 songs, max volume 80.0 dB
+                         80.0);
+        // 400 songs, max volume 85.0 dB
         ipod2 = new IPod(400,
-                         85.0); // 400 songs, max volume 85.0 dB
+                         85.0);
+        // 300 songs, max volume 70.0 dB
         ipod3 = new IPod(300,
-                         70.0); // 300 songs, max volume 70.0 dB
+                         70.0);
 
         // Test equality and inequality for IPod
         System.out.println("IPod Equality Test:");
@@ -41,12 +43,16 @@ public class Main
         final IPad ipad1;
         final IPad ipad2;
         final IPad ipad3;
+
+        // Has case, OS version iPadOS 15
         ipad1 = new IPad(true,
-                         "iPadOS 15"); // Has case, OS version iPadOS 15
+                         "iPadOS 15");
+        // No case, OS version iPadOS 14
         ipad2 = new IPad(false,
-                         "iPadOS 14"); // No case, OS version iPadOS 14
+                         "iPadOS 14");
+        // Has case, OS version iPadOS 15
         ipad3 = new IPad(true,
-                         "iPadOS 15"); // Has case, OS version iPadOS 15
+                         "iPadOS 15");
 
         // Test equality and inequality for IPad
         System.out.println("IPad Equality Test:");
@@ -73,12 +79,16 @@ public class Main
         final IPhone iphone1;
         final IPhone iphone2;
         final IPhone iphone3;
+
+        // 120 minutes, carrier Verizon
         iphone1 = new IPhone(120.0,
-                             "Verizon"); // 120 minutes, carrier Verizon
+                             "Verizon");
+        // 180 minutes, carrier T-Mobile
         iphone2 = new IPhone(180.0,
-                             "T-Mobile"); // 180 minutes, carrier T-Mobile
+                             "T-Mobile");
+        // 120 minutes, carrier AT&T
         iphone3 = new IPhone(120.0,
-                             "AT&T"); // 120 minutes, carrier AT&T
+                             "AT&T");
 
         // Test equality and inequality for IPhone
         System.out.println("IPhone Equality Test:");
@@ -104,18 +114,22 @@ public class Main
         final IPhone16 iphone16_1;
         final IPhone16 iphone16_2;
         final IPhone16 iphone16_3;
+
+        // 100 minutes, high-res camera, 512 GB
         iphone16_1 = new IPhone16(100.0,
                                   "Verizon",
                                   true,
-                                  512); // 100 minutes, high-res camera, 512 GB
+                                  512);
+        // 100 minutes, high-res camera, 256 GB
         iphone16_2 = new IPhone16(100.0,
                                   "Verizon",
                                   true,
-                                  256); // 100 minutes, high-res camera, 256 GB
+                                  256);
+        // 100 minutes, no high-res camera, 512 GB
         iphone16_3 = new IPhone16(100.0,
                                   "Verizon",
                                   false,
-                                  512); // 100 minutes, no high-res camera, 512 GB
+                                  512);
 
         // Test equality and inequality for IPhone16
         System.out.println("IPhone16 Equality Test:");
