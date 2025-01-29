@@ -25,14 +25,15 @@ class IPod extends IDevice
      * @param maxVolumeDecibels the max volume of the IPod as a double.
      */
     IPod(final int songsStored,
-                final double maxVolumeDecibels)
+         final double maxVolumeDecibels)
     {
+        super(IPOD_PURPOSE);
+
         validateSongsStored(songsStored);
         validateMaxVolumeDecibels(maxVolumeDecibels);
 
         this.songsStored = songsStored;
         this.maxVolumeDecibels = maxVolumeDecibels;
-        purpose = IPOD_PURPOSE;
     }
 
     /**

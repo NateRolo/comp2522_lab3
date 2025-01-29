@@ -1,8 +1,9 @@
 package ca.bcit.comp2522.idevice;
 
 /**
- * Represents an iPhone, a type of IDevice used primarily for communication.
- * Provides details about the phone's carrier, remaining minutes, and purpose.
+ * Represents an iPhone, a type of IDevice used primarily
+ * for communication. Provides details about the phone's carrier,
+ * remaining minutes, and purpose.
  *
  * @author Nathan O
  * @version 1.0
@@ -18,18 +19,20 @@ class IPhone extends IDevice
     /**
      * Constructs an {@code IPhone} object.
      *
-     * @param phonePlanMinutes the initial number of minutes in the phone plan.
+     * @param phonePlanMinutes the initial number of minutes
+     *                         in the phone plan.
      * @param carrier          the carrier providing the phone plan.
      */
     IPhone(final double phonePlanMinutes,
-                  final String carrier)
+           final String carrier)
     {
+        super(IPHONE_PURPOSE);
+
         validatePhonePlanMinutes(phonePlanMinutes);
         validateCarrier(carrier);
 
         this.phonePlanMinutesRemaining = phonePlanMinutes;
         this.carrier = carrier;
-        purpose = IPHONE_PURPOSE;
     }
 
     /**

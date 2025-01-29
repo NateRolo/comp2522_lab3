@@ -30,9 +30,9 @@ class IPhone16 extends IPhone
      * @param memorySizeGB     the memory size of the phone in gigabytes.
      */
     IPhone16(final double phonePlanMinutes,
-                    final String carrier,
-                    final boolean hasHighResCamera,
-                    final int memorySizeGB)
+             final String carrier,
+             final boolean hasHighResCamera,
+             final int memorySizeGB)
     {
         super(phonePlanMinutes,
               carrier);

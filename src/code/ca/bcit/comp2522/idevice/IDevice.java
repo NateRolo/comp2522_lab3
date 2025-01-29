@@ -2,24 +2,20 @@ package ca.bcit.comp2522.idevice;
 
 /**
  * Represents an abstract base class for Apple devices.
- * <p>
- *     Provides a foundation for device-related classes with common functionality
- *     such as retrieving the device purpose and printing device details.
- *     All devices extending this class must implement the {@code printDetails()} method.
- * </p>
  *
  * @author Nathan O
  * @version 1.0
  */
 abstract class IDevice
 {
-    static String purpose;
+    private final String purpose;
 
     /**
      * Constructs an {@code IDevice} object.
      */
-    IDevice()
+    IDevice(final String purpose)
     {
+        this.purpose = purpose;
     }
 
     /**

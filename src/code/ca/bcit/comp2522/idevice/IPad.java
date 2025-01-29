@@ -21,13 +21,15 @@ class IPad extends IDevice
      * @param iOSVersion  the iOS version of the iPad.
      */
     IPad(final boolean hasACase,
-                final String iOSVersion)
+         final String iOSVersion)
     {
+        super(IPAD_PURPOSE);
+
         validateIOSVersion(iOSVersion);
 
         this.hasACase = hasACase;
         this.iOSVersion = iOSVersion;
-        purpose = IPAD_PURPOSE;
+
     }
 
     /**
