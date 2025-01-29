@@ -9,6 +9,7 @@ package ca.bcit.comp2522.idevice;
  *     and memory size.
  * </p>
  *
+ * @author Jacob F
  * @author Nathan O
  * @version 1.0
  */

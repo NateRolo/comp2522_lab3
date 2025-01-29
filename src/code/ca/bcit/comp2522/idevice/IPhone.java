@@ -5,6 +5,7 @@ package ca.bcit.comp2522.idevice;
  * for communication. Provides details about the phone's carrier,
  * remaining minutes, and purpose.
  *
+ * @author Jacob F
  * @author Nathan O
  * @version 1.0
  */

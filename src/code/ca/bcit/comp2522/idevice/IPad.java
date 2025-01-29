@@ -4,6 +4,7 @@ package ca.bcit.comp2522.idevice;
  * Represents an iPad, a type of IDevice used for learning.
  * Provides details about its purpose, case status, and iOS version.
  *
+ * @author Jacob F
  * @author Nathan O
  * @version 1.0
  */
