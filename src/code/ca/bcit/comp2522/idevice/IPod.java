@@ -42,7 +42,7 @@ class IPod extends IDevice
      *
      * @return the maximum volume of the iPod as a double.
      */
-    double getMaxVolumeDecibels()
+    final double getMaxVolumeDecibels()
     {
         return maxVolumeDecibels;
     }
@@ -52,7 +52,7 @@ class IPod extends IDevice
      *
      * @param songsStored as an int.
      */
-    void setSongsStored(final int songsStored)
+    final void setSongsStored(final int songsStored)
     {
         validateSongsStored(songsStored);
 
@@ -64,7 +64,7 @@ class IPod extends IDevice
      *
      * @return the number of songs stored as an int.
      */
-    int getSongsStored()
+    final int getSongsStored()
     {
         return songsStored;
     }

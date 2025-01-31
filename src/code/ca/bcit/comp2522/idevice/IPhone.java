@@ -41,7 +41,7 @@ class IPhone extends IDevice
      *
      * @return the carrier as a String.
      */
-    String getCarrier()
+    final String getCarrier()
     {
         return carrier;
     }
@@ -51,7 +51,7 @@ class IPhone extends IDevice
      *
      * @param carrier the new carrier as a String.
      */
-    void setCarrier(final String carrier)
+    final void setCarrier(final String carrier)
     {
         validateCarrier(carrier);
 
@@ -63,7 +63,7 @@ class IPhone extends IDevice
      *
      * @return the number of minutes as a double.
      */
-    double getPhonePlanMinutesRemaining()
+    final double getPhonePlanMinutesRemaining()
     {
         return phonePlanMinutesRemaining;
     }
@@ -73,7 +73,7 @@ class IPhone extends IDevice
      *
      * @param minutesAdded the number of minutes to add as a double.
      */
-    void addMinutes(final double minutesAdded)
+    final void addMinutes(final double minutesAdded)
     {
         validatePhonePlanMinutes(minutesAdded);
 
@@ -89,7 +89,7 @@ class IPhone extends IDevice
      *
      * @param minutesUsed the number of minutes to use as a double.
      */
-    void useMinutes(final double minutesUsed)
+    final void useMinutes(final double minutesUsed)
     {
         validatePhonePlanMinutes(minutesUsed);
 

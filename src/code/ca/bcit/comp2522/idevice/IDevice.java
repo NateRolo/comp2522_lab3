@@ -24,7 +24,7 @@ abstract class IDevice
      *
      * @return the purpose of the device as a {@code String}.
      */
-    String getPurpose()
+    final String getPurpose()
     {
         return purpose;
     }

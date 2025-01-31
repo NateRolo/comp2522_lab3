@@ -38,7 +38,7 @@ class IPad extends IDevice
      *
      * @return the iOS version as a String.
      */
-    String getIOSVersion()
+    final String getIOSVersion()
     {
         return iOSVersion;
     }
@@ -51,7 +51,7 @@ class IPad extends IDevice
      *
      * @param iOSVersion the new iOS version to set as a String.
      */
-    void setIOSVersion(final String iOSVersion)
+    final void setIOSVersion(final String iOSVersion)
     {
         validateIOSVersion(iOSVersion);
 
@@ -63,7 +63,7 @@ class IPad extends IDevice
      *
      * @return true if the iPad has a case, false otherwise.
      */
-    boolean iPadHasACase()
+    final boolean iPadHasACase()
     {
         return hasACase;
     }
@@ -73,7 +73,7 @@ class IPad extends IDevice
      *
      * @param hasACase a boolean indicating if the iPad has a case.
      */
-    void setHasACase(final boolean hasACase)
+    final void setHasACase(final boolean hasACase)
     {
         this.hasACase = hasACase;
     }
