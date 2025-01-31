@@ -5,7 +5,8 @@ package ca.bcit.comp2522.idevice;
  * Provides details about its purpose, case status, and iOS version.
  *
  * @author Nathan O
- * @version 1.0
+ * @author Jacob F
+ * @version 1.0.2025
  */
 class IPad extends IDevice
 {
