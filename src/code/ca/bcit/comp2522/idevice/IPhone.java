@@ -6,7 +6,8 @@ package ca.bcit.comp2522.idevice;
  * remaining minutes, and purpose.
  *
  * @author Nathan O
- * @version 1.0
+ * @author Jacob F
+ * @version 1.0.2025
  */
 class IPhone extends IDevice
 {
