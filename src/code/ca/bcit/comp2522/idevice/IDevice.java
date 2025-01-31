@@ -5,7 +5,9 @@ package ca.bcit.comp2522.idevice;
  * method to get the purpose specific to the device and
  * an abstract method to return the details of the device.
  *
- * @author Nathan O
+ * @author Nathan Oloresisimo
+ * @author Jacob Fonseca
+ * @version 1.0.2025
  */
 abstract class IDevice
 {
