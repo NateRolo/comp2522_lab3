@@ -4,6 +4,10 @@ package ca.bcit.comp2522.idevice;
  * Represents an iPod, a specific type of IDevice used for playing music.
  * Provides details about the iPod's purpose, maximum volume in decibels,
  * and the number of songs stored.
+ *
+ * @author Nathan Oloresisimo
+ * @author Jacob Fonseca
+ * @version 1.0.2025
  */
 public class IPod extends IDevice
 {
