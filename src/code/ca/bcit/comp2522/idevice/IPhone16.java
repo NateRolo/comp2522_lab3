@@ -10,7 +10,8 @@ package ca.bcit.comp2522.idevice;
  * </p>
  *
  * @author Nathan O
- * @version 1.0
+ * @author Jacob F
+ * @version 1.0.2025
  */
 class IPhone16 extends IPhone
 {
