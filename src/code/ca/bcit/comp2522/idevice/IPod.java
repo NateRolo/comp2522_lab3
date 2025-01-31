@@ -6,7 +6,8 @@ package ca.bcit.comp2522.idevice;
  * and the number of songs stored.
  *
  * @author Nathan O
- * @version 1.0
+ * @author Jacob F
+ * @version 1.0.2025
  */
 class IPod extends IDevice
 {
