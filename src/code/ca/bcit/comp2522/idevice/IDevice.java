@@ -4,7 +4,8 @@ package ca.bcit.comp2522.idevice;
  * Represents an abstract base class for Apple devices.
  *
  * @author Nathan O
- * @version 1.0
+ * @author Jacob F
+ * @version 1.0.2025
  */
 abstract class IDevice
 {
