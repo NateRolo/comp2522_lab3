@@ -1,5 +1,14 @@
 package ca.bcit.comp2522.idevice;
 
+/**
+ * Represents an iPad, a specific type of IDevice used for learning.
+ * Provides details about the iPad's purpose, case status,
+ * and the version of iOS.
+ *
+ * @author Nathan Oloresisimo
+ * @author Jacob Fonseca
+ * @version 1.0.2025
+ */
 public class IPad extends IDevice
 {
 
