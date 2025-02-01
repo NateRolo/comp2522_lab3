@@ -147,6 +147,12 @@ class IPhone extends IDevice
         return super.hashCode();
     }
 
+    /**
+     * Return a string representation of a generic IPhone.
+     *
+     * @return a string including the details of the IPhone.
+ *             including the phone plan minutes and the carrier.
+     */
     @Override
     public String toString()
     {
@@ -169,8 +175,6 @@ class IPhone extends IDevice
 
         return iPhoneDetails;
     }
-
-
 
     /**
      * Prints the details of the iPhone to the console.

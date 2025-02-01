@@ -31,8 +31,9 @@ abstract class IDevice
 
     /**
      * Prints the details of the device.
-     *
+     * <p>
      * Must be implemented by subclasses to define specific details for each device.
+     * </p>
      */
     abstract void printDetails();
 
