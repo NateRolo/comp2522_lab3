@@ -1,7 +1,19 @@
 package ca.bcit.comp2522.idevice;
 
+/**
+ * The Main class contains test methods to verify equality for various iDevice objects.
+ *
+ * @author Jacob F
+ * @author Nathan O
+ * @version 1.0 2025
+ */
 public class Main
 {
+    /**
+     * The main method runs all test cases.
+     *
+     * @param args command-line arguments (not used)
+     */
     public static void main(final String[] args)
     {
         testIPodEquality();
@@ -10,6 +22,9 @@ public class Main
         testIPhone16Equality();
     }
 
+    /**
+     * Tests equality and inequality of IPod objects.
+     */
     private static void testIPodEquality()
     {
         // Create IPod objects
@@ -48,6 +63,9 @@ public class Main
         System.out.println();
     }
 
+    /**
+     * Tests equality and inequality of IPad objects.
+     */
     private static void testIPadEquality()
     {
         // Create IPad objects
@@ -88,6 +106,9 @@ public class Main
 
     }
 
+    /**
+     * Tests equality and inequality of IPhone objects.
+     */
     private static void testIPhoneEquality()
     {
         // Create IPhone objects
@@ -127,6 +148,9 @@ public class Main
 
     }
 
+    /**
+     * Tests equality and inequality of IPhone16 objects.
+     */
     private static void testIPhone16Equality()
     {
         // Create IPhone16 objects
